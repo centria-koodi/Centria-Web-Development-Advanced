@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parhiala Mekanik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            background-color: #1a1a1a;
+        }
+
+        header {
+            background: url('./media/mies-ja-auto.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        header p {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+       
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #services {
+            background: #222;
+        }
+
+        .service {
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #111;
+            color: #777;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;   
+            margin-top: 10px;
+            max-width: 800px; 
+        }
+
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            margin: 10px 0;
+            border: none;
+            background: #00bcd4;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0097a7;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Parhiala Mekanik</h1>
+            <p>Paras ratkaisu autokorjaukseen ja metallityöhön</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#services">Palvelut</a>
+        <a href="#about">Tietoa meistä</a>
+        <a href="#contact">Yhteystiedot</a>
+    </nav>
+
+    <section id="services">
+        <h2>Palvelut</h2>
+        <div class="service">
+            <h3>Autokorjaus</h3>
+            <p>Huippulaatuista autokorjausta yksityisille ja yrityksille.</p>
+        </div>
+        <div class="service">
+            <h3>Metallityöt</h3>
+            <p>Korkean tarkkuuden metallityöt kaikkiin tarpeisiin.</p>
+        </div>
+        <div class="service">
+            <h3>Alihankinta</h3>
+            <p>Luotettava kumppani yrityksesi projekteihin.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Tietoa meistä</h2>
+        <p>Olemme kokenut yritys, joka tarjoaa laadukasta palvelua yli 10 vuoden kokemuksella. Olen Mika Parhiala, metallityöntekijä ja autonkorjausmekaanikko yli kahden vuosikymmenen kokemuksella. Työni juuret ulottuvat lapsuuteeni, jolloin vietin loputtomia tunteja isäni verstaalla oppien käsittelemään työkaluja ja ymmärtämään, miten koneet toimivat. Jo varhain ymmärsin, että kädentaito ja tekninen osaaminen ovat vahvuuksia, joita haluan kehittää koko elämäni ajan. Olen aina nauttinut haasteista, joita monimutkaiset projektit tuovat mukanaan. Metallityöt vaativat tarkkuutta, suunnitelmallisuutta ja luovuutta, ja näitä piirteitä olen pyrkinyt tuomaan jokaiseen projektiini. Oli kyse sitten mittatilaustyönä valmistettavista koneenosista tai vanhan auton korin entisöinnistä, tavoitteenani on aina tarjota asiakkaalle korkealaatuista työtä, joka kestää aikaa. Autonkorjaus on toinen intohimoni. Näen jokaisen auton yksilönä, ja pyrin ymmärtämään sen tarpeet ennen työn aloittamista. Huollan ja korjaan niin uudemmat kuin vanhemmatkin autot, mutta erityisen lähellä sydäntäni ovat klassikkoautot, joiden entisöinti vaatii sekä teknistä taitoa että historiallista ymmärrystä. Jokainen onnistuneesti palautettu auto on minulle henkilökohtainen voitto.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Yhteystiedot</h2>
+        <p>Ota yhteyttä täyttämällä alla oleva lomake:</p>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Nimi" required>
+            <span id="nameError" class="error"></span>
+   
+            <input type="email" id="email" name="email" placeholder="Sähköposti" required>
+            <span id="emailError" class="error"></span>
+
+            <textarea id="message" name="message" rows="5" placeholder="Viesti" required></textarea>
+            <span id="messageError" class="error"></span>
+
+            <div>
+            <button type="submit">Lähetä</button>
+            </div>
+        </form>
+
+        <div id="formFeedback" class="success" style="display: none;">
+            Kiitos viestistäsi! Otamme sinuun yhteyttä pian.
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Estää lomakkeen oletusarvoisen lähetyksen
+
+            let valid = true;
+
+            // Puhdistetaan mahdolliset aikaisemmat virheilmoitukset
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+
+            // Tarkistetaan kentät
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Nimi on pakollinen.";
+                valid = false;
+            }
+
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Sähköposti on pakollinen.";
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailError").textContent = "Anna kelvollinen sähköpostiosoite.";
+                valid = false;
+            }
+
+            if (message === "") {
+                document.getElementById("messageError").textContent = "Viesti on pakollinen.";
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById("formFeedback").style.display = "block";
+                document.getElementById("contactForm").reset(); // Tyhjennä lomake
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Markus Parhiala, Kaikki oikeudet pidätetään.</p>
+    </footer>
+</body>
+</html>
+
+

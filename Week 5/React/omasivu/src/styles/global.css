@@ -1,0 +1,143 @@
+/* Yleiset tyylit */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+    
+  #root {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+    background-color: #1a1a1a;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  /* Header */
+  .header {
+    background: url('/media/mies-ja-auto.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .header h1, .header p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Navigaatio */
+  .navbar {
+    position: sticky;
+    top: 0;
+    background: #333;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .navbar a {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  .navbar a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Sektiot */
+  section {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #services {
+    background: #222;
+  }
+  
+  .service {
+    margin: 20px 0;
+  }
+
+/*Lomkkeen tyylit*/
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    max-width: 800px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    margin: 10px 0;
+    border: none;
+    background: #00bcd4;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  button:hover {
+    background: #0097a7;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .success {
+    color: green;
+    font-size: 16px;
+  }
+  
+  
+  /* Footer */
+  footer {
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  

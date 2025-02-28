@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Käyttäjien hallinta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Käyttäjien hallinta</h2>
+    
+    <form id="userForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nimi</label>
+            <input type="text" id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Sähköposti</label>
+            <input type="email" id="email" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Lisää käyttäjä</button>
+    </form>
+
+    <h3 class="mt-4">Käyttäjät</h3>
+    <ul id="userList" class="list-group mt-3"></ul>
+</div>
+
+<script>
+    const userForm = document.getElementById("userForm");
+    const userList = document.getElementById("userList");
+
+    // Hae käyttäjät
+    function fetchUsers() {
+        fetch("http://localhost:3000/users")
+            .then(res => res.json())
+            .then(users => {
+                userList.innerHTML = "";
+                users.forEach(user => {
+                    const li = document.createElement("li");
+                    li.className = "list-group-item d-flex justify-content-between align-items-center";
+                    li.innerHTML = `
+                        ${user.name} - ${user.email}
+                        <div>
+                            <button class="btn btn-warning btn-sm" onclick="updateUser(${user.id}, '${user.name}', '${user.email}')">Muokkaa</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteUser(${user.id})">Poista</button>
+                        </div>
+                    `;
+                    userList.appendChild(li);
+                });
+            });
+    }
+
+    // Lisää käyttäjä
+    userForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        fetch("http://localhost:3000/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email })
+        }).then(res => res.json())
+        .then(() => {
+            userForm.reset();
+            fetchUsers();
+        });
+    });
+
+    // Poista käyttäjä
+    function deleteUser(id) {
+        fetch(`http://localhost:3000/users/${id}`, { method: "DELETE" })
+        .then(() => fetchUsers());
+    }
+
+    // Päivitä käyttäjä
+    function updateUser(id, oldName, oldEmail) {
+        const name = prompt("Anna uusi nimi:", oldName);
+        const email = prompt("Anna uusi sähköposti:", oldEmail);
+        if (name && email) {
+            fetch(`http://localhost:3000/users/${id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email })
+            }).then(() => fetchUsers());
+        }
+    }
+
+    // Lataa käyttäjät heti sivun avautuessa
+    fetchUsers();
+</script>
+
+</body>
+</html>

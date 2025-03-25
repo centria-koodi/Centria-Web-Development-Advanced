@@ -22,6 +22,7 @@ function ReadDeleteUsers() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:5000/users/${id}`);
+      fetchUsers(); // Päivitä käyttäjälista poiston jälkeen
     } catch (err) {
       console.error(err);
       alert('Failed to delete user');

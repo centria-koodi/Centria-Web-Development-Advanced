@@ -1,25 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CreateUser from './components/CreateUser';
-import UpdateUser from './components/UpdateUser';
 import ReadDeleteUsers from './components/ReadDeleteUsers';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import UpdateUser from './components/UpdateUser';
 
 function App() {
-  const [usersUpdated, setUsersUpdated] = useState(false);
-
-  const handleUserAdded = () => {
-    setUsersUpdated(!usersUpdated);  // Varmistetaan, että käyttäjälista päivittyy
-  };
-
   return (
     <div className="App">
-      <div className="container">
-        <h1 className="my-5 text-center">React - App</h1>
-        <CreateUser />
-        <UpdateUser />
-        <ReadDeleteUsers />
-      </div>
+      <CreateUser />
+      <ReadDeleteUsers />
+      <UpdateUser />
     </div>
   );
 }
+
 export default App;

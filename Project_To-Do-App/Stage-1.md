@@ -1,58 +1,89 @@
-Käyttäjäpersoonat:
+# To-Do App - Suunnitelma
 
-1. Opiskelija Emma:
-- 21-vuotias yliopisto-opiskelija
-- Käyttää To-Do-sovellusta luentojen, tehtävien ja ryhmäprojektien hallintaan
-- Tarvitsee selkeän tehtävälistan, muistutukset ja mahdollisuuden järjestää tehtävät eri kurssien alle
+## 🧑‍🎓 Käyttäjäpersoonat
 
-2. Työntekijä Tommi:
-- 35-vuotias IT-alan asiantuntija
-- Hallitsee työprojektien ja henkilökohtaisten tehtävien yhdistelmää
-- Haluaa synkronoida sovelluksen kalenterin kanssa ja lisätä tehtäviin deadlineja
+### 1. 🎓 Opiskelija Emma
+- 📚 21-vuotias yliopisto-opiskelija
+- ✅ Käyttää To-Do-sovellusta luentojen, tehtävien ja ryhmäprojektien hallintaan
+- 📌 Tarvitsee selkeän tehtävälistan, muistutukset ja mahdollisuuden järjestää tehtävät eri kurssien alle
 
-3. Perheenäiti Anna
-- 40-vuotias kahden lapsen äiti
-- Käyttää sovellusta perheen aikataulujen ja kauppalistan hallintaan
-- Arvostaa mahdollisuutta jakaa tehtäviä perheenjäsenille ja lisätä muistutuksia
+### 2. 💻 Työntekijä Tommi
+- 👨‍💻 35-vuotias IT-alan asiantuntija
+- 🔄 Hallitsee työprojektien ja henkilökohtaisten tehtävien yhdistelmää
+- 📅 Haluaa synkronoida sovelluksen kalenterin kanssa ja lisätä tehtäviin deadlineja
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 3. 👩‍👧‍👦 Perheenäiti Anna
+- 👩‍👦 40-vuotias kahden lapsen äiti
+- 🏡 Käyttää sovellusta perheen aikataulujen ja kauppalistan hallintaan
+- 👨‍👩‍👧 Arvostaa mahdollisuutta jakaa tehtäviä perheenjäsenille ja lisätä muistutuksia
 
-Käyttötapaukset ja tilanteet:
+---
 
-1. Opiskelija tilanne:
-- Avaa sovelluksen -> Klikkaa etusivulla "Lisää tehtävä" kuvaketta ja kirjoittaa "Palauta essee" -> Asettaa eräpäivän tehtävälle -> Asettaa alatehtäviä "Etsi lähteet", "Kirjoita johdanto", yms -> sulkee sovellusken. (Sovellus muistuttaa häntä ennen eräpäivää)
+## 🎭 Käyttötapaukset ja tilanteet
 
-2. Työntekijä tilanne
-- Avaa sovelluksen -> Siirty profiilinsa asetuksiin -> Synkronoi tehtävänsä Google-kalenteriin -> Siirtyy etusivulle ja Luo tehtävän "valmistele esitys" -> Lisää tiedoston tehtävään -> Sulkee sovelluksen. (Myöhemmin merkitsee tehtävän valmiiiksi ja tehtävä säilyy yhteenvedossa suoritettuna)
+### 1. 🎓 Opiskelijan tilanne
+1. 📲 Avaa sovelluksen
+2. ➕ Klikkaa etusivulla "Lisää tehtävä" -kuvaketta ja kirjoittaa "Palauta essee"
+3. ⏳ Asettaa eräpäivän tehtävälle
+4. 📌 Asettaa alatehtäviä: "Etsi lähteet", "Kirjoita johdanto", jne.
+5. 🔔 Sovellus muistuttaa ennen eräpäivää
 
-3. Perheenäiti tilanne
-- Avaa sovelluksen -> Luo tehtävän "Viikon kauppalista" -> Asettaa "alatehtäviä", eli erinlaisia ostoksia -> Jakaa lisan puolisolleen -> Puoliso merkitsee välivaiheita suoritetuiksi omallla sovelluksellaan -> Äiti asettaa vielä toistuvan muistutuksen "Varaa hammaslääkäri lapselle" -> Sulkevat sovelluksen. (Sovellus muistuttaa joka 3kk välein hammmaslääkäristä)
+### 2. 💼 Työntekijän tilanne
+1. 📲 Avaa sovelluksen
+2. ⚙️ Siirtyy profiilinsa asetuksiin -> Synkronoi tehtävänsä Google-kalenteriin
+3. 📝 Luo tehtävän "Valmistele esitys"
+4. 📎 Lisää tiedoston tehtävään
+5. ✅ Myöhemmin merkitsee tehtävän valmiiksi ja se säilyy yhteenvedossa
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 3. 🏡 Perheenäidin tilanne
+1. 📲 Avaa sovelluksen
+2. 🛒 Luo tehtävän "Viikon kauppalista"
+3. 📌 Lisää alatehtäviä: ostoslistan eri tuotteet
+4. 👨‍👩‍👧 Jakaa listan puolisolleen
+5. 🔔 Asettaa toistuvan muistutuksen "Varaa hammaslääkäri lapselle" joka 3kk
 
-Käyttöliittymän prototyypit:
+---
 
+## 🎨 Käyttöliittymän prototyypit
+_(Tähän lisätään linkki tai kuva prototyypeistä, kun ne ovat valmiit)_
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-Tietoarkkitehtuuri ja tekninen suunnittelu:
+## 🏗️ Tietoarkkitehtuuri ja tekninen suunnittelu
 
-- Projektin kuvaus: Tehdään "To-Do-Appi" eli päivittäisten tehtävien hallintaan ja asettamiseen tarkoitettu suunnittelu sovellus. Voi suunnitella myös pitemmällä aikavälillä. Käyttäjä voi kirjautua järjestelmään, jotta käyttäjä voi tallentaa omat tehtävänsä. Tehdään hyvä käytettävyys, kuten "Drag & Drop"-järjestely tai tärkeysjärjestys tehtäville. Deadline asettamis toiminto + muistutukset (esim. sähköpostimuistutus lähestyvistä tehtävistä).
-- HTML & CSS – Käyttöliittymän peruselementit ja tyylit.
-- JavaScript (React) – Sovelluksen interaktiivisuus ja tilan hallinta.
-- Vite Projektin käynnistämiseen.
-- Node.js – Backend toteutetaan Node.js:llä ja Expressillä.
-- REST & Web API – Tehtävät tallennetaan backend-palvelimeen REST API:n avulla.
-- Tietokantana on MongoDB, jossa tehtävät säilyvät palvelimella.
-- JWT-authentikointi (kirjautuminen), jossa käyttäjä voi tallentaa omat tehtävänstä. 
-- Käyttöliitymä - UI (Tailwind CSS tai Material UI?)
+### 🔹 Projektin kuvaus
+- 📌 "To-Do-Appi" on päivittäisten tehtävien hallintaan tarkoitettu sovellus
+- 🗓️ Mahdollistaa myös pitkän aikavälin suunnittelun
+- 🔐 Käyttäjä voi kirjautua järjestelmään tallentaakseen omat tehtävänsä
+- 🎯 Käytettävyys: "Drag & Drop" -järjestely ja tärkeysjärjestys tehtäville
+- 🔔 Deadline-asetukset ja muistutukset (esim. sähköpostimuistutus)
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 🔹 Teknologiat
+- 🎨 **HTML & CSS** – Käyttöliittymän peruselementit ja tyylit
+- ⚛️ **JavaScript (React)** – Sovelluksen interaktiivisuus ja tilan hallinta
+- 🚀 **Vite** – Projektin käynnistämiseen
+- 🌍 **Node.js & Express** – Backendin toteutus
+- 🔄 **REST & Web API** – Tehtävät tallennetaan backend-palvelimeen
+- 💾 **MongoDB** – Tietokanta tehtävien tallentamiseen
+- 🔐 **JWT-autentikointi** – Käyttäjä voi tallentaa omat tehtävänsä
+- 🎨 **Käyttöliittymä** – UI (Tailwind CSS tai Material UI?)
 
-Projektinhallinta ja käyttäjätestaus:
+---
 
-- Projektin- ja versionhallintaan GitHub.
-- Unit-testaus (Mocha, Jest) - Testataan yksittäisiä funktioita backendissä.
-- API-testaus (cURL/MongoDB compass) - Testatan backendin API-endpointit sekä Varmistetaan, että CRUD-operaatiot toimivat
-- Käyttäjätestaus (UI-testaus) - Pyydetään testikäyttäjiä kokeilemaan sovellusta
-- Loppukäyttäjien testaus -Testaan eri laitteilla ja selaimilla (Chrome, Firefox, Edge) - Tarkistetaan mobiilikäytettävyys
+## 📊 Projektinhallinta ja käyttäjätestaus
+
+### 📂 Versionhallinta
+- 🛠️ **GitHub** – Projektin- ja versionhallintaan
+
+### 🔍 Testaus
+- ✅ **Unit-testaus (Mocha, Jest):** Testataan yksittäisiä funktioita backendissä
+- 🔄 **API-testaus (cURL/MongoDB Compass):** Testataan backendin API-endpointit ja CRUD-operaatiot
+- 🎭 **Käyttäjätestaus (UI-testaus):** Pyydetään testikäyttäjiä kokeilemaan sovellusta
+- 📱 **Loppukäyttäjien testaus:**
+  - 🖥️ Testataan eri laitteilla ja selaimilla (Chrome, Firefox, Edge)
+  - 📲 Tarkistetaan mobiilikäytettävyys
+
+---
+
+✨ **Tavoitteena on helppokäyttöinen, monipuolinen ja skaalautuva To-Do-sovellus!** 🚀
+

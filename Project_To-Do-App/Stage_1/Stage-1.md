@@ -45,7 +45,7 @@
 ---
 
 ## 🎨 Käyttöliittymän prototyypit
-_(Tähän lisätään linkki tai kuva prototyypeistä, kun ne ovat valmiit)_
+[Lataa PDF](To-Do-App_UI-Prototypes.pdf)
 
 ---
 
